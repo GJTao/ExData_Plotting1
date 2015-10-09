@@ -12,5 +12,5 @@ powerdata$datetime <- as.POSIXct(powerdata$datetime, format = "%d/%m/%Y %H:%M:%S
 
 ##png of global active power v.s. datetime
 png(filename = "plot2.png", width = 480, height = 480)
-with(powerdata, plot(datetime, global_active_power, ylab = "Global Active Power (kilowatts)", xlab = "", type = "l"))
+with(powerdata, plot(datetime, global_active_power, ylab = "Global Active Power (kilowatts)", xlab = "Time", type = "l"))
 dev.off()

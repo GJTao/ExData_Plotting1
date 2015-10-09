@@ -12,7 +12,7 @@ powerdata$datetime <- as.POSIXct(powerdata$datetime, format = "%d/%m/%Y %H:%M:%S
 
 ##png of submetering v.s. datetime
 png(filename = "plot3.png", width = 480, height = 480)
-with(powerdata, plot(datetime, sub_metering_1, ylab = "Energy sub metering", xlab = "", type = "l"))
+with(powerdata, plot(datetime, sub_metering_1, ylab = "Energy sub metering", xlab = "Time", type = "l"))
 with(powerdata, lines(sub_metering_2 ~ datetime, col = "red"))
 with(powerdata, lines(sub_metering_3 ~ datetime, col = "blue"))
 legend("topright", lty = 1, col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
